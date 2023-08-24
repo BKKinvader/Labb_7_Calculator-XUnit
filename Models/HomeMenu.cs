@@ -34,44 +34,62 @@ namespace Labb_7_Calculator
 
                 int inputMenu;
 
+                //Input i ifsatsen måste vara siffra
                 if (!int.TryParse(Console.ReadLine(), out inputMenu))
                 {
+                    Console.Clear();
                     Console.WriteLine("Invalid input, please enter a number from 1 to 6.");
                     continue;
                 }
-                Console.Clear();
+                else if(inputMenu > 6)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Invalid number");
+                }
 
+                
                 switch (inputMenu)
                 {
                     case 1:
+                        Console.Clear();
                         Console.WriteLine("Addition");
+                        //Skickar användaren till UserInput med char +
                         inputNumbers = input.Input('+');
                         calculator.Addition(inputNumbers.Number1, inputNumbers.Number2);
-                        
+                        Console.ReadKey();
+                        Console.Clear();
+
                         break;
                         
                     case 2:
+                        Console.Clear();
                         Console.WriteLine("Subtraction");
                         inputNumbers = input.Input('-');                       
                         calculator.Subtraction(inputNumbers.Number1, inputNumbers.Number2);
-                        
+                        Console.ReadKey();
+                        Console.Clear();
+
                         break;
 
                     case 3:
-                        
+                        Console.Clear();
                         Console.WriteLine("Division");
                         inputNumbers = input.Input('/');
                         calculator.Division(inputNumbers.Number1, inputNumbers.Number2);
-                       
+                        Console.ReadKey();
+                        Console.Clear();
+
                         break;
 
                     case 4:
-
+                        Console.Clear();
                         Console.WriteLine("Multiplication");
                         inputNumbers = input.Input('*');
                         calculator.Multiplication(inputNumbers.Number1, inputNumbers.Number2);
+                        Console.ReadKey();
+                        Console.Clear();
 
-                        
+
                         break;
 
                     case 5:

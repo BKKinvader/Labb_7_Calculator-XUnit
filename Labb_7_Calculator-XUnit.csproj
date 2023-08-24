@@ -12,8 +12,4 @@
     <Folder Include="Models\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Calculator_XUnit_Test\Calculator_XUnit_Test.csproj" />
-  </ItemGroup>
-
 </Project>
